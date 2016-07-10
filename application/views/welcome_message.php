@@ -209,7 +209,7 @@
                             <div class="section">
                                 <label for="file1" class="field file">
                                     <span class="button btn-primary btn-sm"> Upload Image </span>
-                                    <input type="file" class="gui-file" name="upload1" id="file1" onChange="document.getElementById('uploader1').value = this.value;">
+                                    <input type="file" class="gui-file" name="upload1" id="file1" multiple onChange="document.getElementById('uploader1').value = this.value;">
                                     <input type="text" class="gui-input" id="uploader1" placeholder="" readonly>
                                 </label>
                             </div>
