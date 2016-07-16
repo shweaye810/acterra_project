@@ -25,16 +25,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </style>
     </head>
     <body>
-
-    <div>
-        <h2><?php echo $name ?></h2>
-        <?php foreach($location as $object){
-            echo $object->Name .'<br/>';
-        }?>
-
-    </div>
-
-
         <div class="smart-wrap">
             <div class="smart-forms smart-container wrap-2">
                 <div class="form-header header-primary">
@@ -46,25 +36,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                             <div class="section">
                                 <label class="field select">
-                                    <select id="location" name="location">
-                                        <option value="">Select Location</option>
-                                        <option value="AS">Arastradero</option>
-                                        <option value="FH">Foothills</option>
-                                        <option value="BT">Bay Trail</option>
-                                        <option value="RG">Redwood Grove</option>
-                                        <option value="Nu">Nursery</option>
-                                    </select>
+                                    <?php if(!empty($location)){
+                                        $select = '<select id="location" name="location">';
+                                        $select.='<option value="">select location</option>';
+                                        foreach($location as $object){
+                                            $select.='<option value="'.$object->ID.'">'.$object->Name.'</option>';
+                                        }
+                                    }
+                                    $select.='</select>';
+                                    echo $select;
+                                        ?>
                                     <i class="arrow double"></i>
                                 </label>
                             </div><!-- end section -->
 
                             <div class="section">
                                 <label class="field select">
-                                    <select id="event_type" name="event_type">
-                                        <option value="">Type of Event</option>
-                                        <option value="AS">Workday</option>
-                                        <option value="FH">Educational</option>
-                                    </select>
+                                    <?php if(!empty($eventType)){
+                                        $select = '<select id="event_type" name="event_type">';
+                                        $select.='<option value="">select event type</option>';
+                                        foreach($eventType as $object){
+                                            $select.='<option value="'.$object->typeID.'">'.$object->Name.'</option>';
+                                        }
+                                    }
+                                    $select.='</select>';
+                                    echo $select;
+                                    ?>
+
+<!--                                    -->
+<!--                                    <select id="event_type" name="event_type">-->
+<!--                                        <option value="">Type of Event</option>-->
+<!--                                        <option value="AS">Workday</option>-->
+<!--                                        <option value="FH">Educational</option>-->
+<!--                                    </select>-->
                                     <i class="arrow double"></i>
                                 </label>
                             </div><!-- end section -->

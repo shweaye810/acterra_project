@@ -1,9 +1,7 @@
 <?php
 
 /**
- * User: Crystal
- * Date: 7/16/16
- * Time: 3:18 PM
+ * Created by Crystal
  */
 class model_events extends CI_Model
 {
@@ -18,6 +16,16 @@ class model_events extends CI_Model
 
         if($query->num_rows()>0){
             return $query->result(); //return an array of objects
+        }else{
+            return NULL;
+        }
+    }
+
+    //query db to get all event type list for ddl
+    function getEventType(){
+        $query = $this->db->query('SELECT * FROM TypeOfEvent');
+        if($query->num_rows()>0){
+            return $query->result();
         }else{
             return NULL;
         }
