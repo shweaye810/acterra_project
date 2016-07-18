@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <head>
         <meta charset="utf-8">
 
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="../css/styles.css">
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"> </script>
         <!-- Latest compiled and minified CSS -->
@@ -38,7 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <label class="field select">
                                     <?php if(!empty($location)){
                                         $select = '<select id="location" name="location">';
-                                        $select.='<option value="">select location</option>';
+                                        $select.='<option value="">Select Location</option>';
                                         foreach($location as $object){
                                             $select.='<option value="'.$object->ID.'">'.$object->Name.'</option>';
                                         }
@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <label class="field select">
                                     <?php if(!empty($eventType)){
                                         $select = '<select id="event_type" name="event_type">';
-                                        $select.='<option value="">select event type</option>';
+                                        $select.='<option value="">Select Event Type</option>';
                                         foreach($eventType as $object){
                                             $select.='<option value="'.$object->typeID.'">'.$object->Name.'</option>';
                                         }
@@ -63,12 +63,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     echo $select;
                                     ?>
 
-<!--                                    -->
-<!--                                    <select id="event_type" name="event_type">-->
-<!--                                        <option value="">Type of Event</option>-->
-<!--                                        <option value="AS">Workday</option>-->
-<!--                                        <option value="FH">Educational</option>-->
-<!--                                    </select>-->
                                     <i class="arrow double"></i>
                                 </label>
                             </div><!-- end section -->
