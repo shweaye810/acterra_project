@@ -28,11 +28,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="smart-wrap">
             <div class="smart-forms smart-container wrap-2">
                 <div class="form-header header-primary">
-                    <h4><i class="fa fa-pencil-square"></i>Volunteer</h4></div><!-- end .form-header section -->
+                    <h4><i class="fa fa-pencil-square"></i>Event Details</h4></div><!-- end .form-header section -->
                     <form method="post" id="new_post" name="new_post"  action="" class="wpcf7-form" enctype="multipart/form-data">
                         <div class="form-body">
                             <div class="spacer-b30">
-                                <div class="tagline"><span>Please Fill all Fields</span></div><!-- .tagline -->
+                                <div class="tagline"><span>Please Fill All Fields</span></div><!-- .tagline -->
                             </div>
                             <div class="section">
                                 <label class="field select">
@@ -67,6 +67,64 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </label>
                             </div><!-- end section -->
 
+                            <div class="section colm colm6">
+                                <input type="text" name="event_name" id="event_name" class="gui-input " placeholder="Event Name">
+                            </div><!-- end section -->
+
+
+                            <div class="section colm colm6">
+                                <input type="text" name="organization_name" id="organization_name" class="gui-input " placeholder="Name of Company/School/Organization">
+                            </div><!-- end section -->
+                            
+                            <div class="frm-row">
+
+                                <div class="section colm colm6">
+                                    <input type="number" name="youth_volunteer" id="youth_volunteer" class="gui-input " placeholder="# Youth Volunteers">
+                                </div><!-- end section -->
+
+                                <div class="section colm colm6">
+                                    <input type="number" name="adult_volunteer" id="adult_volunteer" class="gui-input " placeholder="# Adult Volunteers">
+                                </div><!-- end section -->
+
+                            </div><!-- end .frm-row section -->
+
+                            <div class="frm-row">
+
+                                <div class="section colm colm6">
+                                    <input type="number" name="duration" id="duration" class="gui-input " placeholder="Duration (hours)">
+                                </div><!-- end section -->
+
+                                <div class="section colm colm6">
+                                    <input type="number" name="plants_installed" id="plants_installed" class="gui-input " placeholder="# Plants Installed">
+                                </div><!-- end section -->
+
+                            </div><!-- end .frm-row section -->
+
+
+                            <div class="frm-row">
+
+                                <div class="section colm colm6">
+                                    <input type="number" name="area_weeded" id="area_weeded" class="gui-input " placeholder="Area weeded (sq feet)">
+                                </div><!-- end section -->
+
+                                <div class="section colm colm6">
+                                    <input type="number" name="creek_length_cleared" id="creek_length_cleared" class="gui-input " placeholder="Creek cleared (feet)">
+                                </div><!-- end section -->
+
+                            </div><!-- end .frm-row section -->
+
+                            <div class="frm-row">
+
+                                <div class="section colm colm6">
+                                    <input type="number" name="amt_trash_removed" id="amt_trash_removed" class="gui-input " placeholder="Trash removed (lbs)">
+                                </div><!-- end section -->
+
+                                <div class="section colm colm6">
+                                    <input type="number" name="amt_recycling_removed" id="amt_recycling_removed" class="gui-input " placeholder="Recycled (lbs)">
+                                </div><!-- end section -->
+
+                            </div><!-- end .frm-row section --> 
+
                             <div class="section">
                                 <label for="file1" class="field file">
                                     <span class="button btn-primary btn-sm"> Upload Image </span>
@@ -74,23 +132,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <input type="text" class="gui-input" id="uploader1" placeholder="" readonly>
                                 </label>
                             </div>
-
-                            <div class="spacer-t40 spacer-b40">
-                                <div class="tagline"><span>Number of Volunteers</span></div><!-- .tagline -->
-                            </div>
-
-                            <div class="frm-row">
-
-                                <div class="section colm colm6">
-                                    <input type="number" name="youth_volunteer" id="youth_volunteer" class="gui-input " placeholder="Youth Volunteers">
-                                </div><!-- end section -->
-
-                                <div class="section colm colm6">
-                                    <input type="number" name="adult_volunteer" id="adult_volunteer" class="gui-input " placeholder="Adult Volunteers">
-                                </div><!-- end section -->
-
-
-                            </div><!-- end .frm-row section -->
 
                             <div class="section">
                                 <label for="comment" class="field prepend-icon">
@@ -103,9 +144,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div><!-- end section -->
 
                         </div><!-- end .form-body section -->
-                        <div class="form-footer">
-                            <button type="submit" class="button btn-primary"> Validate </button>
+                        <div class="form-footer" align = "right">
                             <button type="reset" class="button"> Cancel </button>
+                            <button type="submit" class="button btn-primary"> Validate </button>
                         </div><!-- end .form-footer section -->
                     </form>
 
