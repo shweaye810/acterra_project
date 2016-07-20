@@ -75,7 +75,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="section colm colm6">
                                 <input type="text" name="organization_name" id="organization_name" class="gui-input " placeholder="Name of Company/School/Organization">
                             </div><!-- end section -->
-                            
+
                             <div class="frm-row">
 
                                 <div class="section colm colm6">
@@ -94,36 +94,58 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <input type="number" name="duration" id="duration" class="gui-input " placeholder="Duration (hours)">
                                 </div><!-- end section -->
 
-                                <div class="section colm colm6">
-                                    <input type="number" name="plants_installed" id="plants_installed" class="gui-input " placeholder="# Plants Installed">
-                                </div><!-- end section -->
+                                <!--                                <div class="section colm colm6">-->
+                                <!--                                    <input type="number" name="plants_installed" id="plants_installed" class="gui-input " placeholder="# Plants Installed">-->
+                                <!--                                </div><!-- end section -->
 
                             </div><!-- end .frm-row section -->
 
 
-                            <div class="frm-row">
+                            <div class="section">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title" align = "center">
+                                            <a data-toggle="collapse" href="#collapse1">Expand Optional Details</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse1" class="panel-collapse collapse">
+                                        <div class="frm-row">
 
-                                <div class="section colm colm6">
-                                    <input type="number" name="area_weeded" id="area_weeded" class="gui-input " placeholder="Area weeded (sq feet)">
-                                </div><!-- end section -->
+                                            <br>
+                                            <div class="section colm colm6">
+                                                <input type="number" name="area_weeded" id="area_weeded" class="gui-input " placeholder="Area weeded (sq feet)">
+                                            </div><!-- end section -->
 
-                                <div class="section colm colm6">
-                                    <input type="number" name="creek_length_cleared" id="creek_length_cleared" class="gui-input " placeholder="Creek cleared (feet)">
-                                </div><!-- end section -->
+                                            <div class="section colm colm6">
+                                                <input type="number" name="creek_length_cleared" id="creek_length_cleared" class="gui-input " placeholder="Creek cleared (feet)">
+                                            </div><!-- end section -->
 
-                            </div><!-- end .frm-row section -->
+                                        </div><!-- end .frm-row section -->
 
-                            <div class="frm-row">
+                                        <div class="frm-row">
 
-                                <div class="section colm colm6">
-                                    <input type="number" name="amt_trash_removed" id="amt_trash_removed" class="gui-input " placeholder="Trash removed (lbs)">
-                                </div><!-- end section -->
+                                            <div class="section colm colm6">
+                                                <input type="number" name="amt_trash_removed" id="amt_trash_removed" class="gui-input " placeholder="Trash removed (lbs)">
+                                            </div><!-- end section -->
 
-                                <div class="section colm colm6">
-                                    <input type="number" name="amt_recycling_removed" id="amt_recycling_removed" class="gui-input " placeholder="Recycled (lbs)">
-                                </div><!-- end section -->
+                                            <div class="section colm colm6">
+                                                <input type="number" name="amt_recycling_removed" id="amt_recycling_removed" class="gui-input " placeholder="Recycled (lbs)">
+                                            </div><!-- end section -->
 
-                            </div><!-- end .frm-row section --> 
+                                        </div><!-- end .frm-row section -->
+
+                                        <div class="section">
+                                            <label for="comment" class="field prepend-icon">
+                                                <textarea class="gui-textarea" id="comment" name="comment" placeholder="Your comment"></textarea>
+                                                <label for="comment" class="field-icon"><i class="fa fa-comments"></i></label>
+                                        <span class="input-hint">
+                                            <strong>HINT:</strong> Add any other details ...
+                                        </span>
+                                            </label>
+                                        </div><!-- end section -->
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="section">
                                 <label for="file1" class="field file">
@@ -133,15 +155,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </label>
                             </div>
 
-                            <div class="section">
-                                <label for="comment" class="field prepend-icon">
-                                    <textarea class="gui-textarea" id="comment" name="comment" placeholder="Your comment"></textarea>
-                                    <label for="comment" class="field-icon"><i class="fa fa-comments"></i></label>
-                                    <span class="input-hint">
-                            	        <strong>HINT:</strong> Add any other details ...
-                                    </span>
-                                </label>
-                            </div><!-- end section -->
+
+
+
+
+
 
                         </div><!-- end .form-body section -->
                         <div class="form-footer" align = "right">
