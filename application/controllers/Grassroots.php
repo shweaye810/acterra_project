@@ -20,9 +20,13 @@ class Grassroots extends CI_Controller
         if($this->form_validation->run() == false){
             $this->load->view('grassrootsview');
         }
+        /*
+         * this doesn't do anything
         else{
+            $welcome_path = "Welcome";
             redirect('http://localhost:8888/acterra_project/index.php/Welcome');
         }
+        */
     }
 
     public function verifyLogin(){
@@ -33,7 +37,8 @@ class Grassroots extends CI_Controller
         $this->load->model('model_login');
 
         if ($this->model_login->login($username,$password)){
-            redirect('http://localhost:8888/acterra_project/index.php/Welcome');
+            $welcome_path = "Welcome";
+            redirect(base_url().index_page()."/".$welcome_path);
             return true;
         }
         else
