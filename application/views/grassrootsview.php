@@ -33,7 +33,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="smart-wrap">
     <div class="smart-forms smart-container wrap-2">
         <div class="form-header header-primary"><h4><i class="fa fa-pencil-square"></i>Grassroots Login</h4></div><!-- end .form-header section -->
-        <?php echo form_open('http://localhost:8888/index.php/grassroots/checkLogin', array('id' => 'new_post','class' => 'wpcf7-form','enctype' => 'multipart/form-data','name' => 'new_post')); ?>
+        <?php
+        //$actual_path = "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $actual_path = "checkLogin";
+        echo form_open('http://localhost:8888/acterra_project/index.php/grassroots/checkLogin'
+                     , array('id' => 'new_post','class' => 'wpcf7-form','enctype' => 'multipart/form-data','name' => 'new_post')); ?>
         <!--        <form id="new_post" name="new_post" action="http://localhost:8888/index.php/welcome" class="wpcf7-form" enctype="multipart/form-data">-->
             <div class="form-body">
                 <div class="spacer-b30">

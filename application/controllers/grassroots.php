@@ -21,7 +21,7 @@ class Grassroots extends CI_Controller
             $this->load->view('grassrootsview');
         }
         else{
-            redirect('http://localhost:8888/index.php/Welcome');
+            redirect('http://localhost:8888/acterra_project/index.php/Welcome');
         }
     }
 
@@ -33,14 +33,13 @@ class Grassroots extends CI_Controller
         $this->load->model('model_login');
 
         if ($this->model_login->login($username,$password)){
+            redirect('http://localhost:8888/acterra_project/index.php/Welcome');
             return true;
-
         }
         else
         {
            $this->form_validation->set_message('verifyLogin', 'Incorrect username and password please try again');
-//            redirect('http://localhost:8888/index.php/welcome');
-            return false;
+           return false;
         }
 
 
