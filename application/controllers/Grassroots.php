@@ -1,7 +1,4 @@
 <?php
-
-
-
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Grassroots extends CI_Controller
@@ -43,7 +40,10 @@ class Grassroots extends CI_Controller
         }
         else
         {
-           $this->form_validation->set_message('verifyLogin', 'Incorrect username and password please try again');
+           $this->form_validation->set_message(
+               'verifyLogin',
+               'Incorrect username and password please try again'
+           );
            return false;
         }
 
