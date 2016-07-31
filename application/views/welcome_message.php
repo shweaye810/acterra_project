@@ -9,8 +9,7 @@ echo validation_errors();
 
         <link rel="stylesheet" href="<?php
                                          echo base_url();
-                                     ?>
-                                     css/styles.css">
+                                     ?>css/styles.css">
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"> </script>
         <!-- Latest compiled and minified CSS -->
