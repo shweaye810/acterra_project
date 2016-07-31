@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+echo validation_errors();
 ?>
 <!DOCTYPE HTML>  
 <html>
@@ -36,31 +37,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                             <div class="section">
                                 <label class="field select">
-                                    <?php if(!empty($location)){
-                                        $select = '<select id="location" name="location">';
-                                        $select.='<option value="">Select Location</option>';
-                                        foreach($location as $object){
-                                            $select.='<option value="'.$object->ID.'">'.$object->Name.'</option>';
+                                    <?php
+                                        if(!empty($location)) {
+                                            $select = '<select id="location" name="location">';
+                                            $select.='<option value="">Select Location</option>';
+                                            foreach($location as $object) {
+                                                $select.='<option value="'.
+                                                         $object->Name.
+                                                         '">'.
+                                                         $object->Name.
+                                                         '</option>';
+                                            }
                                         }
-                                    }
-                                    $select.='</select>';
-                                    echo $select;
-                                        ?>
+                                        $select.='</select>';
+                                        echo $select;
+                                    ?>
                                     <i class="arrow double"></i>
                                 </label>
                             </div><!-- end section -->
 
                             <div class="section">
                                 <label class="field select">
-                                    <?php if(!empty($eventType)){
-                                        $select = '<select id="event_type" name="event_type">';
-                                        $select.='<option value="">Select Event Type</option>';
-                                        foreach($eventType as $object){
-                                            $select.='<option value="'.$object->typeID.'">'.$object->Name.'</option>';
+                                    <?php
+                                        if(!empty($eventType)){
+                                            $select = '<select id="event_type" name="event_type">';
+                                            $select.='<option value="">Select Event Type</option>';
+                                            foreach($eventType as $object){
+                                                $select.='<option value="'.
+                                                         $object->Name.
+                                                         '">'.
+                                                         $object->Name.
+                                                         '</option>';
+                                            }
                                         }
-                                    }
-                                    $select.='</select>';
-                                    echo $select;
+                                        $select.='</select>';
+                                        echo $select;
                                     ?>
 
                                     <i class="arrow double"></i>
@@ -79,11 +90,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="frm-row">
 
                                 <div class="section colm colm6">
-                                    <input type="number" name="youth_volunteer" id="youth_volunteer" class="gui-input " placeholder="# Youth Volunteers">
+                                    <input type="number" name="youth" id="youth_volunteer" class="gui-input " placeholder="# Youth Volunteers">
                                 </div><!-- end section -->
 
                                 <div class="section colm colm6">
-                                    <input type="number" name="adult_volunteer" id="adult_volunteer" class="gui-input " placeholder="# Adult Volunteers">
+                                    <input type="number" name="adult" id="adult_volunteer" class="gui-input " placeholder="# Adult Volunteers">
                                 </div><!-- end section -->
 
                             </div><!-- end .frm-row section -->
@@ -117,7 +128,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             </div><!-- end section -->
 
                                             <div class="section colm colm6">
-                                                <input type="number" name="creek_length_cleared" id="creek_length_cleared" class="gui-input " placeholder="Creek cleared (feet)">
+                                                <input type="number" name="creek_cleared" id="creek_length_cleared" class="gui-input " placeholder="Creek cleared (feet)">
                                             </div><!-- end section -->
 
                                         </div><!-- end .frm-row section -->
@@ -125,18 +136,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <div class="frm-row">
 
                                             <div class="section colm colm6">
-                                                <input type="number" name="amt_trash_removed" id="amt_trash_removed" class="gui-input " placeholder="Trash removed (lbs)">
+                                                <input type="number" name="trash_removed" id="amt_trash_removed" class="gui-input " placeholder="Trash removed (lbs)">
                                             </div><!-- end section -->
 
                                             <div class="section colm colm6">
-                                                <input type="number" name="amt_recycling_removed" id="amt_recycling_removed" class="gui-input " placeholder="Recycled (lbs)">
+                                                <input type="number" name="recycled" id="amt_recycling_removed" class="gui-input " placeholder="Recycled (lbs)">
                                             </div><!-- end section -->
 
                                         </div><!-- end .frm-row section -->
 
                                         <div class="section">
                                             <label for="comment" class="field prepend-icon">
-                                                <textarea class="gui-textarea" id="comment" name="comment" placeholder="Your comment"></textarea>
+                                                <textarea class="gui-textarea" id="comment" name="commens" placeholder="Your comment"></textarea>
                                                 <label for="comment" class="field-icon"><i class="fa fa-comments"></i></label>
                                         <span class="input-hint">
                                             <strong>HINT:</strong> Add any other details ...
