@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title> Green Knight&apos;s Test page </title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/style.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/styles.css">
 
@@ -14,15 +14,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"> </script>
     <!-- Latest compiled and minified CSS -->
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
-
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -37,8 +32,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </ul>
 </form>
 
-
-
 <form method="post" id="new_post" name="new_post"  action="" class="wpcf7-form" enctype="multipart/form-data">
     <!-- fieldsets -->
     <fieldset class = "wpcf7-form">
@@ -48,17 +41,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="spacer-b30">
                 <div class="tagline"><span>Please Fill All Fields</span></div><!-- .tagline -->
             </div>
-        </div>
-        </div>
-        </div>
 
-        <div class="smart-forms">
-           <div class="section colm colm6">
+            <!--DATEPICKER            -->
+            <div class="section colm colm6">
                 <input type="date" class="date"  id="datepicker" >
             </div><!-- end section -->
 
 
-
+            <!--LOCATION SELECION           -->
             <div class="section ">
                 <label class="field select">
                     <?php
@@ -81,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div><!-- end section -->
 
 
-
+            <!--EVENT TYPE SELECION           -->
             <div class="section">
                 <label class="field select">
                     <?php
@@ -103,12 +93,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </label>
             </div><!-- end section -->
 
-
+            <!--EVENT NAME          -->
             <div class="section colm colm6">
                 <input type="text" name="event_name" id="event_name" class="gui-input " placeholder="Event Name">
             </div><!-- end section -->
-
-
 
             <div class="section colm colm6">
                 <input type="text" name="organization_name" id="organization_name" class="gui-input " placeholder="Name of School/Organization">
@@ -119,11 +107,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div><!-- end section -->
 
         </div>
-
-
-        <!--<input type="button" name="previous" class="previous action-button" value="Do" />-->
         <input  type="button" name="next" class="next action-button" value="Next" />
-
 
     </fieldset>
 
@@ -135,12 +119,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="spacer-b30">
                 <div class="tagline"><span>Please Fill All Fields</span></div><!-- .tagline -->
             </div>
-        </div>
-        </div>
-        </div>
-
-        <div class="smart-forms">
-
 
             <div class="frm-row">
 
@@ -181,9 +159,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="section colm colm6">
                 <input type="number" name="plants_installed" id="plants_installed" class="gui-input " placeholder="# Plants Installed">
             </div><!-- end section -->
+        </div>
 
-        </div>
-        </div>
         <input type="button" name="previous" class="previous action-button" value="Previous" />
         <input type="button" name="next" class="next action-button" value="Next" />
     </fieldset>
@@ -195,7 +172,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="spacer-b30">
                 <div class="tagline"><span>Please Fill All Fields</span></div><!-- .tagline -->
             </div>
-
 
             <div class="section">
                 <label for="file1" class="field file">
@@ -216,15 +192,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div><!-- end section -->
         </div>
 
-
-
-
-
-
         <input type="button" name="previous" class="previous action-button" value="Previous" />
         <input type="submit" name="submit" class="submit action-button" value="Submit" />
     </fieldset>
-
 
 </form>
 
@@ -308,12 +278,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         });
     });
 
-//    $(".submit").click(function(){
-//        return false;
-//    })
-
 </script>
-
-
 </body>
 </html>
