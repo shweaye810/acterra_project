@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
+<?php echo validation_errors(); ?>
 <!-- multistep form -->
 <form id = "msform" >
     <!-- progressbar -->
@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-<form class = "wpcf7-form">
+<form method="post" id="new_post" name="new_post"  action="" class="wpcf7-form" enctype="multipart/form-data">
     <!-- fieldsets -->
     <fieldset class = "wpcf7-form">
 
@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
         <div class="smart-forms">
-            <div class="section colm colm6">
+           <div class="section colm colm6">
                 <input type="date" class="date"  id="datepicker" >
             </div><!-- end section -->
 
@@ -308,9 +308,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         });
     });
 
-    $(".submit").click(function(){
-        return false;
-    })
+//    $(".submit").click(function(){
+//        return false;
+//    })
 
 </script>
 
