@@ -14,7 +14,6 @@ class model_events extends CI_Model
     function getLocationList()
     {
         $query =$this->db->query('SELECT * FROM location');
-
         if($query->num_rows()>0){
             return $query->result(); //return an array of objects
         }else{
@@ -37,6 +36,7 @@ class model_events extends CI_Model
         $this->load->helper('url');
 
         $data = array(
+            'date' => $this->input->post('date'),
             'location' => $this->input->post('location'),
             'event_type' => $this->input->post('event_type'),
             'event_name' => $this->input->post('event_name'),
@@ -50,6 +50,8 @@ class model_events extends CI_Model
             'recycled' => $this->input->post('recycled'),
             'comments' => $this->input->post('comments'),
         );
+        $data['date'] = date('Y-m-d H:i:s', strtotime($data['date']));
+        print_r($data);
 
         return $this->db->insert('site_data', $data);
     }
