@@ -51,7 +51,6 @@ class model_events extends CI_Model
             'comments' => $this->input->post('comments'),
         );
         $data['date'] = date('Y-m-d H:i:s', strtotime($data['date']));
-        print_r($data);
 
         return $this->db->insert('site_data', $data);
     }
