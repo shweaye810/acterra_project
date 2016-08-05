@@ -25,7 +25,7 @@ class Welcome extends CI_Controller {
 
 		$data['location'] = $this->model_events->getLocationList();
 		$data['eventType'] = $this->model_events->getEventType();
-
+        $this->set_require('date');
 		$this->set_require('location');
 		$this->set_require('event_type');
 		$this->set_require('event_name');
