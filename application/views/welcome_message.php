@@ -18,6 +18,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script>
+     $( function() {
+         $( "#datepicker" ).datepicker();
+     } );
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -44,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <!--DATEPICKER            -->
             <div class="section colm colm6">
-                <input type="date" class="date"  id="datepicker" >
+                <p>Date: <input type="text" id="datepicker" name="date"></p>
             </div><!-- end section -->
 
 
@@ -198,8 +204,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </form>
 
-<!-- jQuery -->
-<script src="http://thecodeplayer.com/uploads/js/jquery-1.9.1.min.js" type="text/javascript"></script>
 <!-- jQuery easing plugin -->
 <script src="http://thecodeplayer.com/uploads/js/jquery.easing.min.js" type="text/javascript"></script>
 <script>
