@@ -41,14 +41,14 @@ class model_events extends CI_Model
             'event_type' => $this->input->post('event_type'),
             'event_name' => $this->input->post('event_name'),
             'organization_name' => $this->input->post('organization_name'),
-            'young' => $this->input->post('young'),
+            'youth' => $this->input->post('youth'),
             'adult' => $this->input->post('adult'),
             'duration' => $this->input->post('duration'),
             'area_weeded' => $this->input->post('area_weeded'),
             'creek_cleared' => $this->input->post('creek_cleared'),
             'trash_removed' => $this->input->post('trash_removed'),
             'recycled' => $this->input->post('recycled'),
-            'comments' => $this->input->post('comments'),
+            'comment' => $this->input->post('comment'),
         );
         $data['date'] = date('Y-m-d H:i:s', strtotime($data['date']));
 
