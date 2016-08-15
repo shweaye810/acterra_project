@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 31, 2016 at 09:14 PM
+-- Generation Time: Aug 15, 2016 at 07:08 PM
 -- Server version: 5.6.30
 -- PHP Version: 5.5.35
 
@@ -72,19 +72,35 @@ CREATE TABLE IF NOT EXISTS `PhotoURLs` (
 --
 
 CREATE TABLE IF NOT EXISTS `site_data` (
+  `date` date NOT NULL,
   `location` varchar(128) NOT NULL,
   `event_type` varchar(128) NOT NULL,
   `event_name` varchar(128) NOT NULL,
   `organization_name` varchar(128) DEFAULT NULL,
-  `young` int(11) DEFAULT NULL,
+  `youth` int(11) DEFAULT NULL,
   `adult` int(11) DEFAULT NULL,
   `duration` int(11) NOT NULL,
   `area_weeded` int(11) DEFAULT NULL,
   `creek_cleared` int(11) DEFAULT NULL,
   `trash_removed` int(11) DEFAULT NULL,
   `recycled` int(11) DEFAULT NULL,
-  `comments` varchar(128) DEFAULT NULL
+  `comment` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `site_data`
+--
+
+INSERT INTO `site_data` (`date`, `location`, `event_type`, `event_name`, `organization_name`, `youth`, `adult`, `duration`, `area_weeded`, `creek_cleared`, `trash_removed`, `recycled`, `comment`) VALUES
+('0000-00-00', '	Stulsaft', 'educational', 'htsh', 'htsh', NULL, 2, 2, 0, 0, 0, 0, ''),
+('0000-00-00', 'Bay Trail/Cooley Landing', 'citizen science', 'thsn', 'thtns', NULL, 3, 4, 0, 0, 0, 0, ''),
+('0000-00-00', 'Bay Trail/Cooley Landing', 'citizen science', 'thsn', 'thtns', NULL, 3, 4, 0, 0, 0, 0, ''),
+('2016-08-03', 'Arastradero', 'educational', 'thht', 'nsh', NULL, 3, 15, 0, 0, 0, 0, ''),
+('2016-08-02', '	Nursery', 'citizen science', 'tnhn', 'th', NULL, 3, 2, 3, 3, 0, 0, ''),
+('2016-08-02', '	Nursery', 'citizen science', 'tnhn', 'th', 2, 3, 2, 3, 3, 0, 0, ''),
+('2016-08-02', '	Nursery', 'citizen science', 'tnhn', 'th', 2, 3, 2, 3, 3, 0, 0, ''),
+('2016-08-02', '	Nursery', 'citizen science', 'tnhn', 'th', 2, 3, 2, 3, 3, 0, 0, ''),
+('2016-08-03', '	Stulsaft', 'workday', 'htnsh', 'htns', 2, 2, 2, 0, 0, 0, 0, 'htnshtn');
 
 -- --------------------------------------------------------
 
@@ -142,6 +158,12 @@ ALTER TABLE `location`
 ALTER TABLE `PhotoURLs`
   ADD PRIMARY KEY (`PhotoId`,`EventId`),
   ADD UNIQUE KEY `EventId` (`EventId`);
+
+--
+-- Indexes for table `site_data`
+--
+ALTER TABLE `site_data`
+  ADD KEY `date` (`date`);
 
 --
 -- Indexes for table `TypeOfEvent`
