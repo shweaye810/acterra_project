@@ -109,6 +109,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div><!-- end section -->
 
 
+
         </div>
         <input  type="button" name="next" class="next action-button" value="Next" />
 
@@ -186,7 +187,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="section">
                 <label for="comment" class="field prepend-icon">
-                    <textarea class="gui-textarea" id="comment" name="commens" placeholder="Your comment"></textarea>
+                    <textarea class="gui-textarea" id="comment" name="comment" placeholder="Your comment"></textarea>
                     <label for="comment" class="field-icon"><i class="fa fa-comments"></i></label>
                                         <span class="input-hint">
                                             <strong>HINT:</strong> Add any other details ...
