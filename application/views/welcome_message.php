@@ -45,12 +45,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="smart-forms">
             <br>
             <div class="spacer-b30">
-                <div class="tagline"><span>Please Fill All Fields</span></div><!-- .tagline -->
+                <div class="tagline"><span>Required Fields</span></div><!-- .tagline -->
             </div>
 
             <!--DATEPICKER            -->
             <div class="section colm colm6">
-                <p>Date: <input type="text" id="datepicker" name="date"></p>
+               <input type="text" id="datepicker" name="date"  placeholder="Date" readonly = "true">
             </div><!-- end section -->
 
 
@@ -108,9 +108,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <input type="text" name="organization_name" id="organization_name" class="gui-input " placeholder="Name of School/Organization">
             </div><!-- end section -->
 
-            <div class="section colm colm6">
-                <input type="text" name="duration" id="duration" class="gui-input " placeholder="Duration(hrs)">
-            </div><!-- end section -->
 
         </div>
         <input  type="button" name="next" class="next action-button" value="Next" />
@@ -123,32 +120,48 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="smart-forms">
             <br>
             <div class="spacer-b30">
-                <div class="tagline"><span>Please Fill All Fields</span></div><!-- .tagline -->
+                <div class="tagline"><span>Optional Fields</span></div><!-- .tagline -->
             </div>
 
-            <div class="frm-row">
+            <div class="section colm colm6">
+                <input type="text" name="duration" id="duration" class="gui-input " placeholder="Duration(hrs)">
+            </div><!-- end section -->
 
-                <div class="section colm colm6">
-                    <input type="number" name="youth" id="youth_volunteer" class="gui-input " placeholder="# Youth Volunteers">
-                </div><!-- end section -->
 
-                <div class="section colm colm6">
-                    <input type="number" name="adult" id="adult_volunteer" class="gui-input " placeholder="# Adult Volunteers">
-                </div><!-- end section -->
+            <div class="section colm colm6">
+                <input type="number" name="youth" id="youth_volunteer" class="gui-input " placeholder="# Youth Volunteers">
+            </div><!-- end section -->
 
-            </div><!-- end .frm-row section -->
+            <div class="section colm colm6">
+                <input type="number" name="adult" id="adult_volunteer" class="gui-input " placeholder="# Adult Volunteers">
+            </div><!-- end section -->
 
-            <div class="frm-row">
+            <div class="section colm colm6">
+                <input type="number" name="plants_installed" id="plants_installed" class="gui-input " placeholder="# Plants Installed">
+            </div><!-- end section -->
 
-                <div class="section colm colm6">
-                    <input type="number" name="area_weeded" id="area_weeded" class="gui-input " placeholder="Area weeded (sq feet)">
-                </div><!-- end section -->
+            <div class="section colm colm6">
+                <input type="number" name="area_weeded" id="area_weeded" class="gui-input " placeholder="Area weeded (sq feet)">
+            </div><!-- end section -->
 
-                <div class="section colm colm6">
-                    <input type="number" name="creek_cleared" id="creek_length_cleared" class="gui-input " placeholder="Creek cleared (feet)">
-                </div><!-- end section -->
+            <div class="section colm colm6">
+                <input type="number" name="creek_cleared" id="creek_length_cleared" class="gui-input " placeholder="Creek cleared (feet)">
+            </div><!-- end section -->
 
-            </div><!-- end .frm-row section -->
+
+        </div>
+
+        <input type="button" name="previous" class="previous action-button" value="Previous" />
+        <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+
+    <fieldset class = "wow">
+
+        <div class="smart-forms">
+            <br>
+            <div class="spacer-b30">
+                <div class="tagline"><span>Optional Fields</span></div><!-- .tagline -->
+            </div>
 
             <div class="frm-row">
 
@@ -162,22 +175,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             </div><!-- end .frm-row section -->
 
-            <div class="section colm colm6">
-                <input type="number" name="plants_installed" id="plants_installed" class="gui-input " placeholder="# Plants Installed">
-            </div><!-- end section -->
-        </div>
-
-        <input type="button" name="previous" class="previous action-button" value="Previous" />
-        <input type="button" name="next" class="next action-button" value="Next" />
-    </fieldset>
-
-    <fieldset class = "wow">
-
-        <div class="smart-forms">
-            <br>
-            <div class="spacer-b30">
-                <div class="tagline"><span>Please Fill All Fields</span></div><!-- .tagline -->
-            </div>
 
             <div class="section">
                 <label for="file1" class="field file">

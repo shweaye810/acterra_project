@@ -50,8 +50,8 @@ class model_events extends CI_Model
             'recycled' => $this->input->post('recycled'),
             'comments' => $this->input->post('comments'),
         );
+        date_default_timezone_set('America/Los_Angeles');
         $data['date'] = date('Y-m-d H:i:s', strtotime($data['date']));
-        print_r($data);
 
         return $this->db->insert('site_data', $data);
     }

@@ -23,8 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = "http://$_SERVER[SERVER_NAME]:$_SERVER[SERVER_PORT]/"
-                    ."acterra_project";
+$config['base_url'] = "http://$_SERVER[SERVER_NAME]:$_SERVER[SERVER_PORT]/";
+                    //."acterra_project";
 
 /*
 |--------------------------------------------------------------------------
