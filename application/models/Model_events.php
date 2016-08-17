@@ -35,6 +35,10 @@ class model_events extends CI_Model
     {
         $this->load->helper('url');
 
+        $youth_vol = $this->input->post('youth');
+        $adult_vol = $this->input->post('adult');
+        $total_vol = $youth_vol + $adult_vol;
+
         $data = array(
             'date' => $this->input->post('date'),
             'location' => $this->input->post('location'),
@@ -44,11 +48,13 @@ class model_events extends CI_Model
             'youth' => $this->input->post('youth'),
             'adult' => $this->input->post('adult'),
             'duration' => $this->input->post('duration'),
+            'plants_installed' => $this->input->post('plants_installed'),
             'area_weeded' => $this->input->post('area_weeded'),
             'creek_cleared' => $this->input->post('creek_cleared'),
             'trash_removed' => $this->input->post('trash_removed'),
             'recycled' => $this->input->post('recycled'),
             'comment' => $this->input->post('comment'),
+            'total_volunteers' => $total_vol
         );
         date_default_timezone_set('America/Los_Angeles');
         $data['date'] = date('Y-m-d H:i:s', strtotime($data['date']));

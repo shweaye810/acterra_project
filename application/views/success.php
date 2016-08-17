@@ -43,9 +43,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <br>
                 <br>
                 <br>
-            </div>
+                            <h5><div class="tagline"><span>Would you like to upload images?</span></div></h5><!-- .tagline -->
+                <br>
+                <br>
 
+                <center>
+                <div class="section colm colm6">
+                    <a href = "http://grassroots.net16.net/photos/">
+                        <input type = "button" class = "button btn-primary btn-sm" value = "Upload Images" />
+                    </a>
+                </div><!-- end section -->
+                </center>
+            </div>
+            
     </div><!-- end .smart-forms section -->
 </div><!-- end .smart-wrap section -->
+    
 </body>
 </html>

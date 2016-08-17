@@ -137,6 +137,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <input type="number" name="adult" id="adult_volunteer" class="gui-input " placeholder="# Adult Volunteers">
             </div><!-- end section -->
 
+            
+
             <div class="section colm colm6">
                 <input type="number" name="plants_installed" id="plants_installed" class="gui-input " placeholder="# Plants Installed">
             </div><!-- end section -->
@@ -145,9 +147,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <input type="number" name="area_weeded" id="area_weeded" class="gui-input " placeholder="Area weeded (sq feet)">
             </div><!-- end section -->
 
-            <div class="section colm colm6">
-                <input type="number" name="creek_cleared" id="creek_length_cleared" class="gui-input " placeholder="Creek cleared (feet)">
-            </div><!-- end section -->
 
 
         </div>
@@ -164,7 +163,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="tagline"><span>Optional Fields</span></div><!-- .tagline -->
             </div>
 
-            <div class="frm-row">
+           <div class="section colm colm6">
+                <input type="number" name="creek_cleared" id="creek_length_cleared" class="gui-input " placeholder="Creek cleared (feet)">
+            </div><!-- end section -->
+
+     
 
                 <div class="section colm colm6">
                     <input type="number" name="trash_removed" id="amt_trash_removed" class="gui-input " placeholder="Trash removed (lbs)">
@@ -173,17 +176,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="section colm colm6">
                     <input type="number" name="recycled" id="amt_recycling_removed" class="gui-input " placeholder="Recycled (lbs)">
                 </div><!-- end section -->
-
-            </div><!-- end .frm-row section -->
-
-
-            <div class="section">
-                <label for="file1" class="field file">
-                    <span class="button btn-primary btn-sm"> Upload Image </span>
-                    <input type="file" class="gui-file" name="upload1" id="file1" multiple onChange="document.getElementById('uploader1').value = this.value;">
-                    <input type="text" class="gui-input" id="uploader1" placeholder="" readonly>
-                </label>
-            </div>
 
             <div class="section">
                 <label for="comment" class="field prepend-icon">
@@ -283,3 +275,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </script>
 </body>
 </html>
+		

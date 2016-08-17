@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="smart-wrap">
             <div class="smart-forms smart-container wrap-2">
-                <div class="form-header header-primary"><h4><i class="fa fa-pencil-square"></i>Grassroots Login</h4></div><!-- end .form-header section -->
+                <div class="form-header header-primary"><h4><i class="fa fa-pencil-square"></i>Grassroots</h4></div><!-- end .form-header section -->
                 <?php
                  $login_path = "grassroots/checkLogin";
                  echo form_open($login_path,

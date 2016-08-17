@@ -35,9 +35,9 @@ CREATE TABLE IF NOT EXISTS `location` (
 --
 
 INSERT INTO `location` (`Name`) VALUES
-('	Foothills'),
-('	Nursery'),
-('	Stulsaft'),
+('Foothills'),
+('Nursery'),
+('Stulsaft'),
 ('Arastradero'),
 ('Bay Trail/Cooley Landing'),
 ('Los Altos Hills: Byrne, Juan Prado Mesa, O''Keefe'),
